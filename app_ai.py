@@ -224,6 +224,8 @@ def main():
 
             col3, col4 = st.columns([1, 1])
 
+            max_size_mb = st.secrets["server"]["max_upload_size"]
+
             with col3:
                 try:
                     st.markdown("<b style='font-size: 12px;'>📂 You may upload files to help the AI answer your question better!</b>", unsafe_allow_html=True)
