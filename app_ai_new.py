@@ -13,7 +13,7 @@ load_dotenv()
 
 # Configure the Gemini API with the key from environment variables
 try:
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
     if not GOOGLE_API_KEY:
         st.error("🔴 GOOGLE_API_KEY not found. Please set it in your .env file.")
         st.stop()
